@@ -1,0 +1,89 @@
+/* topdeststyles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+nav.topBar {
+    background-color: #495057;
+    padding: 10px;
+    text-align: center;
+}
+
+nav.topBar a {
+    color: #ced4da;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav.topBar a:hover {
+    color: #adb5bd;
+}
+
+.profile-info, .bookmarks {
+    background-color: #495057;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.profile-info h2, .bookmarks h2 {
+    color: #17a2b8;
+}
+
+.profile-info p, .bookmarks p {
+    color: #dee2e6;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Dropdown */
+.bookmark-dropdown {
+    text-align: left;
+    padding-left: 20px;
+    color: #f8f9fa;
+}
+
+.bookmark-dropdown select {
+    background-color: #495057;
+    color: #f8f9fa;
+    border: 1px solid #17a2b8;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Footer  */
+footer {
+    background-color: #33333300;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

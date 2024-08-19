@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background-image: url('images/background-image-1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 520px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.center h1 {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 10px solid silver;
+}
+.center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+
+.pass:hover {
+  text-decoration: underline;
+}
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  border: none;
+}
+input[type="submit"]:hover {
+  border-color: #2691d9;
+}
+.signup_link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a {
+  color: #2691d9;
+  text-decoration: none;
+}
+.signup_link a:hover {
+  text-decoration: underline;
+}
+
+#login-message {
+  text-align: center;
+  color: red;
+}
+
+.txt_field i {
+  position: absolute;
+  left: -25px; /* Adjust the distance of the icon from the left of the text field */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666; /* Icon color */
+  font-size: 20px; /* Icon size */
+}
+
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+
+.pass a {
+  color: #a6a6a6; 
+  text-decoration: none; 
+}
+
+.pass a:hover {
+  text-decoration: underline; 
+  color: #a6a6a6;
+}
+
+.direct-login{
+  width: 100%;
+  height: 50px;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  border: none;
+}
+
+.direct-login:hover{
+  border-color: #2691d9;
+}
+
+#countdown-message {
+  text-align: center;
+  color: red;
+}
+
+/*reset password css */
+#reset-password-message {
+  text-align: center;
+}
+
+.txt_field {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 40px; /* Adjusted for lock icon */
+    color: #999;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.fas.fa-lock {
+    position: absolute;
+    right: 10px; /* Position lock icon on the left */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.far.fa-eye {
+    position: absolute;
+    left: 400px; /* Position eye icon on the right */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    cursor: pointer;
+    z-index: 1; /* Ensure it stays on top of other elements */
+}

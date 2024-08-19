@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/topdeststyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Media/nasi-lemak.png">  
+    <title>User Account</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #343a40;  
+            color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .topBar {
+            background-color: #495057; 
+            padding: 10px;
+            text-align: center;
+        }
+
+        .topBar a {
+            color: #ced4da;  
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .topBar a:hover {
+            color: #adb5bd;  
+        }
+
+        .profile-info, .bookmarks {
+            background-color: #495057;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 600px;
+        }
+
+        .profile-info h2, .bookmarks h2 {
+            color: #17a2b8;
+        }
+
+        .profile-info p, .bookmarks p {
+            color: #dee2e6;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .bookmark-dropdown {
+            text-align: left;
+            padding-left: 20px;
+            color: #f8f9fa;
+        }
+
+        .bookmark-dropdown select {
+            background-color: #495057;
+            color: #f8f9fa;
+            border: 1px solid #17a2b8;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="topBar">
+        <a href="home.html">Home</a>
+        <a href="chinese.html">Chinese Cuisine</a>
+        <a href="malay.html">Malay Cuisine</a>
+        <a href="Indian.html">Indian Cuisine</a>
+        <a href="Account.html">Account</a>
+    </nav>
+
+    <br><br><br><br>
+    <header>
+        <h1>User Account</h1>
+    </header>
+
+    <br><br><br><br>
+    <main>
+        <section class="profile-info">
+            <h2>Profile Information</h2>
+            <p><strong>Username:</strong> <span id="username">JohnDoe</span></p>
+            <p><strong>Phone Number:</strong> <span id="phoneNumber">(123) 456-7890</span></p>
+            <p><strong>Email:</strong> <span id="email">john.doe@example.com</span></p>
+        </section>
+
+        <section class="bookmarks">
+            <h2>Bookmarked Foods</h2>
+            <div class="bookmark-dropdown">
+                <select id="bookmarkDropdown">
+                    <!-- Bookmarked foods will be dynamically inserted here -->
+                </select>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="margin: 0;">&copy; 2024 Malaysian Indian Cuisine. All Rights Reserved.</p>
+            <p style="margin: 5px 0;">
+                <a href="a/aboutus.html" style="color: #fff; text-decoration: none; margin-right: 15px;">About Us</a>
+                <a href="a/aboutus.html" style="color: #fff; text-decoration: none; margin-right: 15px;">Contact</a>
+                <a href="a/privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a>
+            </p>
+            <div style="margin-top: 10px;">
+                <a href="home.html" style="color: #fff; margin-right: 15px; text-decoration: none;">Home</a>
+                <a href="chinese.html" style="color: #fff; margin-right: 15px; text-decoration: none;">Chinese Cuisine</a>
+                <a href="malay.html" style="color: #fff; margin-right: 15px; text-decoration: none;">Malay Cuisine</a>
+                <a href="Indian.html" style="color: #fff; text-decoration: none;">Indian Cuisine</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to update profile information
+        function updateProfile() {
+            let username = localStorage.getItem('username') || 'JohnDoe';
+            let phoneNumber = localStorage.getItem('phoneNumber') || '(123) 456-7890';
+            let email = localStorage.getItem('email') || 'john.doe@example.com';
+
+            document.getElementById('username').textContent = username;
+            document.getElementById('phoneNumber').textContent = phoneNumber;
+            document.getElementById('email').textContent = email;
+        }
+
+        // Function to display bookmarks in the dropdown
+        function displayBookmarks() {
+            let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+            let bookmarkDropdown = document.getElementById('bookmarkDropdown');
+
+            // Clear existing options
+            bookmarkDropdown.innerHTML = '';
+
+            if (bookmarks.length === 0) {
+                bookmarkDropdown.innerHTML = '<option>No bookmarks yet</option>';
+            } else {
+                bookmarks.forEach(item => {
+                    let option = document.createElement('option');
+                    option.textContent = item;
+                    bookmarkDropdown.appendChild(option);
+                });
+            }
+        }
+
+        // Call the functions to update profile and display bookmarks on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProfile();
+            displayBookmarks();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="Floating-Social-Share-Bar-jQuery/css/jquery-social-share-bar.css" >
+    <link rel="icon" type="image/png" href="Media/nasi-lemak.png">  
+</head>
+<body>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <div id="share-bar"></div>
+
+    <div class="center">
+        <h1>Sign Up</h1>
+        <form method="post" id="signup-form">
+            <div class="txt_field">
+                <input type="text" id="username" required />
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" required />
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field">
+                <input type="email" id="email" required />
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" id="phoneNo" required pattern="\d{3}-\d{7,8}" />
+                <span></span>
+                <label>Phone Number (XXX-XXXXXXX)</label>
+            </div>
+            <input type="submit" value="Sign Up" />
+            <div class="login_link">Already have an account? <a href="login.html">Log in</a></div>
+        </form>
+        <p id="signup-message"></p>
+    </div>
+
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="register.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+    crossorigin="anonymous">
+    </script>
+    <script src="Floating-Social-Share-Bar-jQuery/js/jquery-social-share-bar.js"></script>
+    <script>
+    $('#share-bar').share();
+    </script>
+    
+</body>
+</html>

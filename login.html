@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Culinary - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Import icons -->
+    <link rel="icon" type="image/png" href="Media/nasi-lemak.png">  
+</head>
+<body class="bg-dark">
+    <div class="center">
+        <h1>Explore Culinary User Login</h1>
+        <form method="post" id="login-form">
+            <div class="txt_field">
+                <i class="fas fa-user"></i> <!-- user icon -->
+                <input type="text" id="usernameOrEmail" required />
+                <span></span>
+                <label>Username / Email</label>
+            </div>
+            <div class="txt_field">
+                <i class="fas fa-lock"></i> <!-- password icon -->
+                <input type="password" id="password" required />
+                <span></span>
+                <label>Password</label>
+                <i class="far fa-eye" id="togglePassword" ></i> <!-- Eye icon for showing password -->
+            </div>
+            <div class="pass">
+                <a href="forgot_password.html">Forgot Password?</a>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe" />
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <input type="submit" value="Login" id="submit"/>
+            <div class="signup_link">Don't have an account? <a href="register.html">Signup</a></div>
+        </form>  
+        <p id="login-message"></p>
+        <p id="countdown-message"></p>
+    </div>
+
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
